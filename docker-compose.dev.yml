@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  web:
+    build: ./azamuku
+    env_file:
+        - variables.dev.env
+    ports:
+      - "5000:5000"
+    command: python run.py
+    volumes:
+      - ./azamuku:/code
+    restart: "unless-stopped"
+  mongo:
+    image: mongo:3.4.10
+    env_file:
+        - variables.dev.env
+    volumes:
+      - ./volumes/mongo/db:/data/db
+    ports:
+      - 27017:27017
+    restart: "unless-stopped"
+  redis:
+    image: redis:4.0.2-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./volumes/redis:/var/lib/redis
+    restart: "unless-stopped"
+
