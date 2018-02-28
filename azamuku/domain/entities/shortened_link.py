@@ -13,3 +13,6 @@ class ShortenedLink:
     ):
         self.target_link = target_link
         self.key = key
+
+    def __eq__(self, other):
+        return self.key == other.key and self.target_link == other.target_link

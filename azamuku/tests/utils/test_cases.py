@@ -8,3 +8,8 @@ from .utils import attr
 @attr("unit")
 class BaseUnitTestCase(TestCase):
     pass
+
+
+@attr("integration")
+class BaseIntegrationTestCase(TestCase):
+    pass

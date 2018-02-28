@@ -2,9 +2,9 @@ version: '3'
 
 services:
   web:
-    build: ./azamuku
+    image: azamuku-test
     env_file:
-        - variables.dev.env
+        - variables.test.env
     ports:
       - "5000:5000"
     command: python run.py
@@ -14,7 +14,7 @@ services:
   mongo:
     image: mongo:3.4.10
     env_file:
-        - variables.dev.env
+        - variables.test.env
     volumes:
       - ./volumes/mongo/db:/data/db
     ports:

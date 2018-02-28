@@ -1,1 +1,3 @@
 nose2==0.7.4
+redis==2.10.6
+marshmallow==2.15.0
