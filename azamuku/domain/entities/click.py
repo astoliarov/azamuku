@@ -13,11 +13,11 @@ class ClickStatistics:
         click_key: str,
         target_link: str,
 
-        referer: str,
-        user_agent: str,
-        user_ip: str,
-
         click_datetime: datetime,
+
+        referer: str='',
+        user_agent: str='',
+        user_ip: str='',
     ):
         self.click_key = click_key
         self.target_link = target_link

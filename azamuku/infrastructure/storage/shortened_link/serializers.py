@@ -1,8 +1,6 @@
 # coding: utf-8
 
-from typing import Dict
-
-from marshmallow import fields, Schema, post_load, pre_load, pre_dump
+from marshmallow import fields, Schema, post_load
 
 from domain.entities import ShortenedLink
 
