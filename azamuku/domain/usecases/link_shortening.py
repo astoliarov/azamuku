@@ -1,5 +1,7 @@
 # coding: utf-8
 
+from urllib import parse
+
 from domain.entities.shortened_link import ShortenedLink
 from domain.interfaces import IShortenedLinkDAO, IKeyGenerationService
 

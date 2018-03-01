@@ -7,7 +7,7 @@ services:
         - variables.dev.env
     ports:
       - "5000:5000"
-    command: python run.py
+    command: gunicorn -c gcfg.py run:azamuku.web_app
     volumes:
       - ./azamuku:/code
 #    restart: "unless-stopped"
